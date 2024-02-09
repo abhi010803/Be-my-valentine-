@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Will you be my Valentine?</title>
+</head>
+<body>
+  <h2>Will you be my Valentine, Nimai?</h2>
+  <button onclick="sayYes()">Yes</button>
+  <button onclick="sayNo()">No</button>
+
+  <p id="response"></p>
+
+  <script>
+    function sayYes() {
+      document.getElementById("response").innerHTML = "Thank you for accepting my invite. Here’s to many more years of being my forever valentine. I love you, my Nimai.";
+    }
+
+    function sayNo() {
+      const funnyResponses = [
+        "Oh no! Did you accidentally press the wrong button?",
+        "Hmm, are you sure? I'll take that as a maybe!",
+        "No worries, I'll just ask someone else... Siri, will you be my Valentine?"
+      ];
+      const randomIndex = Math.floor(Math.random() * funnyResponses.length);
+      document.getElementById("response").innerHTML = funnyResponses[randomIndex];
+    }
+  </script>
+</body>
+</html>
